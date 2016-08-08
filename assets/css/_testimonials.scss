@@ -1,0 +1,54 @@
+section.decorated.testimonials {
+	padding-bottom: 5px;
+	background-color: #3B3B3B;
+	color: white;
+	text-align: center;
+}
+
+blockquote {
+	padding: 65px 0 40px 0;
+	font-family: $secondary-font;
+	font-size: 14px;
+	color: #C5C5C5;
+	line-height: 1.75;
+}
+
+cite {
+	display: block;
+	font-size: 16px;
+	font-style: normal;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	.role {
+		text-transform: capitalize;
+	}
+}
+.rating {
+	padding: 15px 0;
+}
+
+.client-slider {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 145px;
+	@media all and (max-width: $bp-3) {
+		margin: 20px auto;
+	}
+	.client {
+		width: 20%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 38px 0;
+		background-color: #4A4A4A;
+		border-right: 1px solid #737373;
+		&:last-child {
+			border-right: none;
+		}
+		@media all and (max-width: $bp-3) {
+			width: 70%;
+			margin: 0 auto;
+			border-bottom: 1px solid #C5C5C5;
+		}
+	}
+}

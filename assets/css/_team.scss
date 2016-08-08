@@ -1,0 +1,124 @@
+.team-members {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 40px;
+	@media all and (max-width: $bp-2) {
+		justify-content: space-around;
+	}
+	.single-member {
+		width: 23%;
+		text-align: center;
+		@media all and (max-width: $bp-2) {
+			width: 35%;
+			margin-bottom: 15px;
+		}
+		@media all and (max-width: $bp-3) {
+			width: 60%;
+		}
+		.social-icon {
+			position: absolute;
+			width: 36px;
+			height: 36px;
+			z-index: 10;
+			border-radius: 0;
+			background-color: white;
+			color: black;
+			transition: top 0.5s ease-in-out;
+			@media all and (max-width: $bp-2) {
+				position: static;
+				margin-top: 5px;
+			}
+			&:nth-child(2) {
+				top: calc(0px - 108px);
+				left: calc(50% - 54px);
+				&:hover {
+					background-color: black;
+					color: white;
+				}
+			}
+			&:nth-child(3) {
+				top: calc(0px - 72px);
+				left: calc(50% - 18px);
+				background-color: $accent-1;
+				color: white;
+				&:hover {
+					background-color: black;
+				}
+			}
+			&:nth-child(4) {
+				top: calc(0px - 36px);
+				left: calc(50% + 18px);
+				&:hover {
+					background-color: black;
+					color: white;
+				}
+			}
+			span {
+				padding-top: 10px;
+			}
+		}
+		.role {
+			display: block;
+		}
+		.role::after {
+			transition: width 0.3s, color 0.3s;
+		}
+	}
+	
+}
+.team-img-container:hover ~ .role::after{
+	@include keyline(0, 100%, $accent-1);
+}
+
+.team-img-container {
+	position: relative;
+	padding: 5px;
+	border: 2px solid #F1F1F1;
+	overflow: hidden;
+	&:hover {
+		border: 2px solid $accent-1;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		bottom: 5px;
+		left: 5px;
+		margin-top: -254px;
+		border-bottom: 254px solid rgba(0, 0, 0, 0.6);
+		border-left: 254px solid transparent;
+		transform: translateX(100%) translateY(100%);
+		transition: transform 0.5s ease-in-out;
+		@media all and (max-width: $bp-2) {
+			display: none;
+		}
+	}
+	&:hover::after {
+		transform: translateX(0) translateY(0);
+	}
+	&:hover .social-icon {
+		&:nth-child(2) {
+			top: calc(50% + 18px);
+			left: calc(50% - 54px);
+		}
+		&:nth-child(3) {
+			top: calc(50% - 18px);
+			left: calc(50% - 18px);
+			background-color: $accent-1;
+			color: white;
+		}
+		&:nth-child(4) {
+			top: calc(50% - 54px);
+			left: calc(50% + 18px);
+		}
+	}
+	img {
+		display: block;
+	}
+}
+
+// .team-img-container:hover .keyline-small::after {
+// 	@include keyline(0, 100%, #DFDFDF);
+// }

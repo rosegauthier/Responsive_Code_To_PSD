@@ -1,0 +1,96 @@
+.works {
+	text-align: center;
+	ul {
+		display: inline-block;
+		margin-top: 15px;
+		li {
+			float: left;
+			margin-right: 1px;
+			width: 110px;
+			background-color: black;
+			transition: background-color 0.3s;
+			&:hover {
+				background-color: $accent-1;
+			}
+			@media all and (max-width: $bp-2) {
+				width: calc(50% - 1px);
+				margin-bottom: 5px;
+				&:nth-of-type(odd) {
+					border-radius: 0 20px 20px 0;
+				}
+				&:nth-of-type(even) {
+					border-radius: 20px 0 0 20px;
+				}
+			}
+			&:first-child {
+				border-radius: 20px 0 0 20px;
+				@media all and (max-width: $bp-2) {
+					float: none;
+					margin: 0 auto 5px auto;
+					border-radius: 20px;
+				}
+			}
+			&:last-child {
+				border-radius: 0 20px 20px 0;
+			}
+			a {
+				width: 100%;
+				padding: 10px 0;
+				text-transform: uppercase;
+				font-size: 11px;
+				color: white;
+				letter-spacing: 2px;
+			}
+		}
+	}
+}
+
+.works-gallery {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 70px 0;
+	.project {
+		width: calc(20% - 4px);
+		margin: 7px 2px;
+		padding-bottom: 20px;
+		border: 2px solid #F1F1F1;
+		@media all and (max-width: $bp-2) {
+			width: calc(40% - 14px);
+			margin: 7px;
+		}
+		@media all and (max-width: $bp-3) {
+			width: calc(80% - 14px);
+		}
+		.project-img-container {
+			position: relative;
+		}
+	}
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.5s;
+	.overlay-icon {
+		width: 50px;
+		height: 50px;
+		margin: 5px;
+		padding-top: 15px;
+		border-radius: 50%;
+		background-color: white;
+	}
+	@media all and (max-width: $bp-2) {
+		opacity: 1;
+	}
+	&:hover {
+		opacity: 1;
+	}
+}

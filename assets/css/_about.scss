@@ -1,0 +1,60 @@
+.about {
+	background-color: #F6F6F6;
+	.about-btns {
+		text-align: center;
+		.button {
+			margin: 20px 5px;
+		}
+	}
+	.offset-box {
+		h2 {
+			position: relative;
+			@include double-keyline-left(0, #E1E1E1);
+		}
+		h3 {
+			padding: 25px 0;
+			text-align: left;
+		}
+		.offset-info li {
+			padding: 0;
+		}
+	}
+}
+
+.skill-name, .competency {
+	display: inline-block;
+	padding-bottom: 5px;
+	font-family: $secondary-font;
+	font-size: 13px;
+	font-style: italic;
+	color: #868686;
+}
+
+.skill-name {
+	float: left;
+}
+
+.competency {
+	float: right;
+}
+
+.meter { 
+	height: 2px;
+	background: #E6E6E6;
+	margin: 30px 0;
+	padding: 0;
+	clear: both;
+	.progress {
+		position: relative;
+		display: block;
+		height: 120%;
+		background-color: $accent-1;
+		i {
+			position: absolute;
+			top: -9px;
+			left: 100%;
+			font-size: 20px;
+			color: $accent-1;
+		}
+	}
+}

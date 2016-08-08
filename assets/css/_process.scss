@@ -1,0 +1,52 @@
+.process .offset-box {
+	margin-top: 85px;
+	margin-bottom: 75px;
+	@media all and (max-width: $bp-2) {
+		margin-bottom: -150px;
+	}
+}
+
+.process {
+	background-color: #F6F6F6;
+	.offset-info {
+		text-align: center;
+		.icon-container {
+			width: 90px;
+			height: 90px;
+			margin: 85px auto 20px auto;
+			border-radius: 50%;
+			background-color: black;
+		}
+		h3 {
+			font-size: 16px;
+		}
+		p {
+			text-align: center;
+		}
+		.button {
+			margin-top: 10px;
+		}
+		ul {
+			margin: 55px 0;
+			font-family: $secondary-font;
+			font-size: 24px;
+			li {
+				display: inline-block;
+				border-bottom: 2px solid transparent;
+				margin: 0 5px;
+				padding: 0;
+				transition: border 0.3s, color 0.3s;
+				&:hover {
+					border-bottom: 2px solid $accent-1;
+					a {
+						color: $accent-1;
+					}
+				}
+				a {
+					padding: 0 5px;
+					color: #E3E3E3;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,96 @@
+.blog {
+	background-color: #202020;
+	color: white;
+	article {
+		display: flex;
+		align-items: center;
+		margin-bottom: 40px;
+		&:first-of-type {
+			margin-top: 40px;
+		}
+		@media all and (max-width: $bp-2) {
+			flex-direction: column;
+		}
+	}
+}
+
+.blog-container > .button {
+	margin: 90px auto 30px auto;
+	background-color: #2B2B2B;
+	border: 2px solid #2B2B2B;
+	transition: background-color 0.3s;
+	a {
+		color: white;
+	}
+	&:hover {
+		background-color: $accent-1;
+	}
+}
+
+.blog-images {
+	flex-basis: 50%;
+	.author-info {
+		position: relative;
+		float: left;
+		width: 20%;
+		.category {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background-color: #303030;
+		}
+		.author-img {
+			position: absolute;
+			top: 70px;
+			left: 10px;
+		}
+	}
+	.post-image-container {
+		float: left;
+		width: 80%;
+		img {
+			display: block;
+		}
+	}
+}
+
+.excerpt {
+	flex-basis: 50%;
+	padding: 40px 55px;
+	border: 1px solid #2B2B2B;
+	@media all and (max-width: $bp-2) {
+		border: none;
+		border-bottom: 1px solid #2B2B2B;
+	}
+	h3 {
+		font-size: 16px;
+	}
+	.logistics {
+		font-size: 12px;
+		font-style: italic;
+		color: #6E6E6E;
+		& > * {
+			padding: 0 10px;
+			border-right: 1px solid #6E6E6E;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				border: none;
+			}
+		}
+	}
+	p {
+		padding: 25px 0;
+		font-size: 15px;
+		color: #C5C5C5;
+		@media all and (max-width: $bp-3) {
+			display: none;
+		}
+	}
+	@media all and (max-width: $bp-3) {
+		.button {
+			margin-top: 20px;
+		}
+	}
+}

@@ -1,0 +1,90 @@
+.services {
+	display: flex;
+	padding: 0;
+	.services-info {
+		background-color: black;
+		color: white;
+		flex-basis: 50%;
+		padding: 45px 0;
+		text-align: right;
+		@media all and (max-width: $bp-1) {
+			flex-basis: 470px;
+			padding: 20px 20px 50px 20px;
+		}
+		@media all and (max-width: $bp-3) {
+			flex-basis: 100%;
+			text-align: left;
+		}
+		h2 {
+			position: relative;
+			@include double-keyline-right(0, #393939);
+			margin: 35px 75px;
+			text-align: right;
+			@media all and (max-width: $bp-1) {
+				margin: 30px 75px;
+			}
+			@media all and (max-width: $bp-3) {
+				margin-left: 0;
+				text-align: left;
+				@include double-keyline-left(0, #393939);
+			}
+		}
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-end;
+		li {
+			flex-basis: 100%;
+			position: relative;
+			margin-bottom: 35px;
+			padding: 0 77px 15px 0;
+			font-size: 14px;
+			h3 {
+				letter-spacing: 2px;
+				color: $accent-1;
+			}
+			h3 + p {
+				width: 100%;
+				max-width: 500px;
+				padding: 0;
+				text-align: right;
+				line-height: 1.75;
+				@media all and (max-width: $bp-3) {
+					text-align: left;
+				}
+			}
+			.services-icon {
+				position: absolute;
+				top: calc(50% - 45px);
+				right: -45px;
+				height: 90px;
+				width: 90px;
+				border-radius: 50%;
+				background-color: white;
+				@media all and (max-width: $bp-3) {
+					top: calc(50% - 30px);
+					right: 0;
+					width: 60px;
+					height: 60px;
+				}
+			}
+		}
+	}
+	.services-img {
+		background: url(../images/services.jpg) top center;
+		background-size: cover;
+		flex-basis: 50%;
+		@media all and (max-width: $bp-1) {
+			flex-basis: auto;
+			flex-grow: 1;
+		}
+		@media all and (max-width: 680px) {
+			background: black;
+		}
+		@media all and (max-width: $bp-3) {
+			display: none;
+		}
+	}
+}

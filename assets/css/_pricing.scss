@@ -1,0 +1,100 @@
+.pricing-structure {
+	margin: 70px auto 55px auto;
+}
+
+.price {
+	float: left;
+	width: 33.3%;
+	padding: 50px 0;
+	border: 1px solid #DFDFDF;
+	text-align: center;
+	transition: transform 0.5s;
+	&:hover {
+		background-color: $accent-1;
+		border-color: $accent-1;
+		color: white;
+		transform: scale(1.05);
+		z-index: 10;
+		.decoration-topper, li {
+			background-color: $accent-1;
+			border-color: $accent-1;
+			color: white;
+		}
+		.plan-container .plan, .button, .button a {
+			background-color: white;
+			color: black;
+		}
+	}
+	@media all and (max-width: $bp-2) {
+		float: none;
+		min-width: 80%;
+		margin: 0 auto 50px auto;
+		&:last-child {
+			margin: 0 auto;
+		} 
+	}
+	&:nth-child(2) {
+		// margin: 0 20px;
+		@media all and (max-width: $bp-2) {
+			margin: 0 auto 50px auto;
+		}
+	}
+	.decoration-topper {
+		width: 75px;
+		height: 75px;
+		padding: 3px;
+		background-color: black;
+		border: 2px solid #DFDFDF;
+		background-clip: content-box;
+		box-shadow: inset 0 0 0 5px white;
+	}
+	.cost {
+		display: block;
+		padding: 10px 10px 10px 0;
+		font-size: 60px;
+		span {
+			font-size: 20px;
+			vertical-align: top;
+		}
+	}
+	.plan-container {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 35px;
+			z-index: -10;
+			width: 100%;
+			border: 1px solid #DFDFDF;
+		}
+		.plan {
+			display: inline-block;
+			width: 45%;
+			margin: 15px 0;
+			padding: 10px 0;
+			border-radius: 0 0 5px 5px;
+			background-color: black;
+			text-transform: uppercase;
+			color: white;
+		}
+	}
+	ul {
+		padding: 30px 0;
+		li {
+			padding: 8px 0;
+			font-family: $secondary-font;
+			font-size: 14px;
+			color: #737373;
+			font-style: italic;
+			line-height: 1.75;
+		}
+	}
+	.button {
+		margin: 15px auto;
+		background-color: black;
+		a {
+			color: white;
+		}
+	}
+}

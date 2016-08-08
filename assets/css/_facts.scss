@@ -1,0 +1,45 @@
+.facts {
+	background-image: url(../images/funfacts.jpg);
+	background-size: cover;
+	color: white;
+	.facts-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.single-fact {
+			width: 22%;
+			margin-top: 70px;
+			margin-bottom: 40px;
+			padding: 55px 0;
+			border: 4px solid white;
+			text-align: center;
+			@media all and (max-width: $bp-2) {
+				width: 40%;
+				justify-content: space-around;
+				margin: 20px auto;
+			}
+			@media all and (max-width: $bp-3) {
+				width: 70%;
+			}
+			.icon-container {
+				width: 60px;
+				height: 60px;
+				margin: 0 auto 30px auto;
+				background-color: white;
+			}
+			span {
+				display: block;
+				font-size: 36px;
+				font-weight: bold;
+			}
+			p {
+				padding-top: 7px;
+				font-family: $primary-font;
+				font-size: 11px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+		}
+	}
+
+}
